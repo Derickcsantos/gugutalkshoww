@@ -1,0 +1,1374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Smooth Scroll*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Utility Classes*/
+
+.text-secondary{
+    color: #3818eb;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-light{
+    background: #cfcfcf;
+}
+
+.bg-secondary{
+    background: #4829f9;
+}
+
+.py-0{padding: 16px 0;}
+.py-1{padding: 24px 0;}
+.py-2{padding: 32px 0;}
+.py-3{padding: 48px 0;}
+
+
+.p-0{padding: 16px;}
+.p-1{padding: 24px;}
+.p-2{padding: 32px;}
+.p-3{padding: 48px;}
+.p-4{padding: 1px;}
+
+.wrapper{
+    max-width: 1320px;
+    padding: 0 50px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 15px 25px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.5 ease;
+}
+
+/*Showcase Area Styling*/
+
+/* Navbar Top */
+.showcase .navbar-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #3c1bf7;
+    position: relative;
+    z-index: 1000; /* Garantir que a navbar-top esteja sobre outros elementos */
+}
+
+.showcase .navbar-top .left,
+.showcase .navbar-top .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.showcase .navbar-top .left li,
+.showcase .navbar-top .right li {
+    margin: 5px;
+}
+
+.showcase .navbar-top .left a,
+.showcase .navbar-top .right a {
+    font-size: 13px;
+    color: #fff;
+    padding: 5px 15px;
+    transition: all 0.5s ease;
+}
+
+.showcase .navbar-top .left a:hover,
+.showcase .navbar-top .right a:hover {
+    color: #ffff00;
+}
+
+/* Navbar Bottom */
+.showcase .navbar-bottom {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-top: 0;
+}
+.brand-left {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente o título com a imagem */
+}
+.brand-left img {
+    max-width: 100px; /* Ajusta o tamanho da imagem, se necessário */
+    margin-right: 18%; /* Espaço entre a imagem e o título */
+}
+.brand-left h1 {
+    font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
+    margin: 0; /* Remove margem padrão do <h1> */
+}
+
+/* Menu Right Styling */
+.showcase .navbar-bottom .menu-right {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.showcase .navbar-bottom .menu-right li {
+    margin: 0 5px;
+    position: relative; /* Necessário para o posicionamento do dropdown */
+}
+
+/* Dropdown Button */
+.showcase .navbar-bottom .dropdown .dropbtn {
+    text-decoration: none;
+    color: #4829f9;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.showcase .navbar-bottom .dropdown .dropbtn:hover {
+    color: #000;
+}
+
+/* Dropdown Content */
+.showcase .navbar-bottom .dropdown .dropdown-content {
+    display: none; /* Oculta o dropdown por padrão */
+    position: absolute;
+    background-color: #fcf8f8;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    white-space: nowrap; /* Faz com que os itens do dropdown se alinhem horizontalmente */
+}
+
+.showcase .navbar-bottom .dropdown .dropdown-content a {
+    color: #4829f9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.showcase .navbar-bottom .dropdown .dropdown-content a:hover {
+    background-color: #e6e6e6;
+}
+
+/* Show Dropdown on Hover */
+.showcase .navbar-bottom .dropdown:hover .dropdown-content {
+    display: flex; /* Exibe o dropdown */
+    flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+.showcase .navbar-bottom .dropdown:hover .dropbtn {
+    color: #000; /* Cor do botão quando o dropdown é exibido */
+}
+
+/* Fix position if you want navbar-bottom to stick at the bottom of the viewport */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o container ocupe toda a altura da tela */
+}
+
+.showcase .showcase-content{
+    max-width: 90%;
+    margin: 15% auto;
+    flex: 1; /* Faz com que o conteúdo ocupe o restante do espaço disponível */
+    padding: 0 10px; 
+    align-items: center;
+    text-align: flex-start;
+}
+
+/*Imagem e conteudo*/
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Espaça o conteúdo igualmente */
+    padding: 20px; /* Adiciona um pouco de padding, se necessário */
+}
+
+/* Estiliza a imagem para que fique quadrada e com overflow escondido */
+
+.showcase .background img {
+    width: 100%;
+    height: auto; /* Ajuste a altura automaticamente para manter a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o container mantendo a proporção */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.showcase .showcase-content p{
+    color: #000;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align:justify;
+    width: 100%;
+}
+
+.showcase .showcase-content h1{
+    color: #4829f9;
+    text-align:center;
+    margin: 0 auto;
+    line-height: 1.6;
+    width: 100%;
+}
+
+
+
+/*Services sectom styling*/
+
+#services {
+    background-color: #f8f9fa; /* Adiciona uma cor de fundo clara */
+    padding: 20px; /* Adiciona um padding ao redor da seção */
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o wrapper */
+}
+
+#services .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#services .items .item{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 300px;
+    background: #4829f9;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3), -5px -5px 20px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+#services .items .item h3{
+    color: #4829f9;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#services .items .item p{
+    /* line-height: 1.4; */
+    font: 14px;
+    color: #95A2BB
+}
+
+#services .items .item i{
+    color: #95A2BB;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#services .items .item:hover i{
+    color: #55BA53;
+}
+
+#services .items .item:hover{
+    background: #3019b1;
+    transform: scale(1.05);
+}
+
+#services .items .item h3{
+    color: #f4f4f4;
+}
+
+
+/* Services Section Bottom */
+#goal{
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#goal div{
+    flex: 1 ;
+}
+#goal .goal-img{
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+#goal .goal-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#goal .goal-text{
+    margin: 0 20px;
+    flex: 2;
+}
+
+#goal .goal-text a{
+    display: inline-block;
+    color: #f4f4f4;
+    background: #4829f9;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 8px 15px;
+    transition: 0.5s;
+}
+
+#goal .goal-text a:hover{
+    color: #fff;
+    background: #000
+}
+
+#goal .goal-text h2{
+    margin: 20px 0;
+    color: #000;
+}
+
+#goal .goal-text .contents{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#goal .goal-text .contents .content{
+    display: flex;
+    align-items: center;
+    gap: 10px;   
+}
+
+#goal .goal-text .contents .content h3{
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #4829f9;
+}
+
+#goal .goal-text .contents .content p{
+    color: #1a1b1e
+}
+
+#goal .goal-text .contents .content i{
+    color: #ffffff;
+    padding: 6px;
+    background: #4829f9;
+    align-self: flex-start; /* alinha um item flexível no topo do seu container.*/
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Portfolio Section Styling */
+
+#portfolio {
+    background: #4829f9;
+}
+
+.portfolio h3 {
+    color: #fff;
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.portfolio h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.portfolio h2 span {
+    font-weight: 500;
+    color: #e6c611;
+}
+
+.portfolio p {
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+.owl-carousel .item {
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 10px; /* Espaçamento interno opcional */
+    border: 2px solid #95A2BB; /* Borda opcional ao redor do box */
+    background-color: #fff; /* Fundo branco para contraste */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra opcional para destaque */
+}
+
+.owl-carousel .item img {
+    display: block;
+    max-width: 100%; /* Ajusta a largura máxima da imagem para o tamanho do box */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre o contêiner sem distorcer a imagem */
+    border: none; /* Remove borda da imagem se houver */
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid #e6c611 !important;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: #e6c611 !important;
+}
+
+
+/*Teams Section Styling*/
+#teams {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    padding: 20px; /* Padding ao redor da seção */
+}
+
+#teams h3{
+    color: #000;
+    font-style: 16px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#teams h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#teams h2 span{
+    font-weight: 500;
+    color:#4829f9;
+}
+
+#teams p{
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+#teams .wrapper {
+    max-width: 1200px; /* Largura máxima para o wrapper */
+    margin: 0 auto; /* Centraliza o wrapper */
+}
+
+#teams .wrapper .card-items{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+}
+
+#teams .wrapper .card {
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 280px;
+    z-index: 1;
+    transition: all 0.5 ease;
+}
+
+#teams .wrapper .card:hover{
+    background:#4829f9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#teams .wrapper .card .card-header{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto;
+    /* transform: translateY(40px); */
+}
+
+#teams .wrapper .card .card-header img{
+    width: 100%;
+    height: auto;
+
+}
+
+#teams .wrapper .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 200px;
+}
+
+#teams .wrapper .card h3{
+    font-size: 18px;
+    color: #95A2BB;
+    padding-top: 10px;
+}
+
+#teams .wrapper .card .card-body h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: #4829f9;
+    margin-top: 5px;
+}
+
+#teams .wrapper .card .card-body ul{
+    display: flex;
+    list-style: none;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+#teams .wrapper .card .card-body ul li a{
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    color: #1a1b1e;
+    transition: all 0.3 ease;
+}
+
+#teams .wrapper .card .card-body ul li a:hover{
+    background: #fff;
+    color: #4829f9;
+}
+
+/*Blog Section Styling*/
+#blog{
+    background: #4829f9;
+    padding: 20px 0;
+}
+
+#blog .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#blog .wrapper .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+#blog .wrapper .header span{
+    height: 1px;
+    width: 4%;
+    background: #95A2BB;
+}
+
+#blog .wrapper .header h4{
+    color: #fff;
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#blog .wrapper .blog-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#blog .wrapper .blog-info h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;   
+}
+
+#blog .wrapper .blog-info h2 span{
+    font-weight: 500;
+    color: #e6c611;
+}
+
+#blog .wrapper .blog-info a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#blog .wrapper .blog-info a:hover{
+    background: none;
+    color: #95A2BB;
+}
+
+#blog .wrapper .blog-card{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#blog .wrapper .card{
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5 ease;
+}
+
+#blog .wrapper .card:hover{
+    transform: scale(1.05);
+}
+
+#blog .wrapper .card .card-header img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+#blog .wrapper .card .card-body .tag{
+    background: #ccc;
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 15px;
+    color: #fff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#blog .wrapper .card .card-body .tag-orange{
+    background-color: rgb(255, 0, 76);
+}
+
+#blog .wrapper .card .card-body .tag-purple{
+    background-color: purple;
+}
+
+#blog .wrapper .card .card-body .tag-red{
+    background-color: red;
+}
+
+#blog .wrapper .card .card-body h4{
+    margin: 10px 15px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #1a1b1e;
+}
+
+#blog .wrapper .card .card-body .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 15px 10px;
+    border-top: 1px solid #536daf;
+    padding: 5px 0;
+}
+
+#blog .wrapper .card .card-body .footer small{
+    color: #1a1b1e;
+    font-weight: 600;
+}
+
+#blog .wrapper .card .card-body .footer a{
+    padding: 5px 10px;
+    background: #e6c611;
+    border-radius: 4px;
+}
+
+/* Seção de Contato Principal */
+#contact {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px; /* Padding ajustado */
+    max-width: 1200px; /* Largura máxima para centralizar */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Título da Seção */
+#contact .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo ao centro */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#contact .title h2 {
+    color: #4829f9;
+    font-weight: 500;
+}
+
+/* Destaque do Título */
+#contact .h3_destaque {
+    color: white;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+/* Layout de Contato */
+.contact {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    /* Centraliza o conteúdo interno da .contact */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Layout da Box */
+.box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "form"
+        "info"
+        "map";
+    gap: 20px;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 1000px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo do Formulário */
+.formBox {
+    width: 100%;
+}
+
+.formBox .row50 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.inputBox {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.inputBox input,
+.inputBox textarea {
+    color: #000;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid rgb(66, 54, 54);
+    border-radius: 5px;
+}
+
+.formBox .row100 .inputBox {
+    width: 100%;
+}
+
+.inputBox span {
+    color: #4829f9;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input[type="submit"] {
+    background: #4829f9;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    max-width: 150px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px;
+}
+
+/* Placeholder */
+.inputBox::placeholder {
+    color: #999;
+}
+
+/* Info */
+.info {
+    background: #4829f9;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.info h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.info .infoBox div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info .infoBox div span {
+    min-width: 35px;
+    height: 40px;
+    color: #4829f9;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info .infoBox div p,
+.info .infoBox div a {
+    color: #fff;
+}
+
+.info .infoBox div a {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Redes Sociais */
+.sci {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.sci li a:hover {
+    color: #fff;
+}
+
+/* Seção de Doação */
+.doacao {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.doacao h1 {
+    margin-bottom: 20px;
+}
+
+.doacao button {
+    color: #fff;
+    background-color: #4829f9;
+    border-radius: 8px;
+    height: 35px;
+    width: 200px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*Footer Section Styling*/
+/*Footer Section Styling*/
+.footer-bottom {
+    background: #4829f9;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-col {
+    width: 100%;
+    max-width: 300px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #e6c611;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom: -5px;
+    background-color: #fff;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding: 8px;
+}
+
+.footer-col .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.footer-col .social-links a {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    background-color: #fff;
+    color: #4829f9;
+}
+
+.copy {
+    background-color: #4829f9;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.copy p {
+    margin: 0;
+}
+
+
+/*Scroll up styling*/
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    border: 3px solid #fff;
+    background: #3019b1;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+/* // responsividade // */
+
+/* Showcase responsividade */
+@media (max-width: 768px) {
+    .showcase .navbar-top, .showcase .navbar-bottom {
+        padding: 0 10px;
+    }
+
+    .showcase .navbar-bottom .menu-right a{
+        padding: 0 10px;
+    }
+
+    .showcase .showcase-content {
+        margin: 10% auto;
+        padding: 0 10px;
+    }
+
+    .background img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .showcase .navbar-top, .showcase .navbar-bottom {
+        padding: 0 5px;
+    }
+
+    .showcase .navbar-bottom .menu-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .showcase .navbar-bottom .menu-right a {
+        padding: 5px 0;
+    }
+
+    .background img {
+        max-height: 200px;
+    }
+}
+
+/* Responsividade serviços*/
+
+@media (max-width: 768px) {
+    .items {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    .item {
+        max-width: 100%; /* Ajusta a largura máxima para 100% */
+    }
+
+    #goal {
+        flex-direction: column; /* Alinha os itens verticalmente */
+    }
+
+    #goal .goal-img, #goal .goal-text {
+        margin: 0 auto;
+    }
+
+    #goal .goal-img {
+        max-width: 100%;
+        margin: 0; /* Remove a margem horizontal */
+    }
+
+    #goal .goal-text {
+        margin: 20px 0; /* Adiciona margem vertical */
+    }
+
+    #goal .goal-text a {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+        padding: 6px 12px; /* Ajusta o padding */
+    }
+
+    #goal .goal-text h2 {
+        font-size: 24px; /* Ajusta o tamanho da fonte */
+    }
+
+    #goal .goal-text .contents {
+        flex-direction: column; /* Alinha verticalmente em dispositivos menores */
+        gap: 15px; /* Aumenta o espaço entre itens */
+    }
+}
+
+@media (max-width: 480px) {
+    #goal .goal-text a {
+        font-size: 10px; /* Ajusta o tamanho da fonte */
+        padding: 4px 8px; /* Ajusta o padding */
+    }
+
+    #goal .goal-text h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+
+    #goal .goal-text .contents .content h3 {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    #goal .goal-text .contents .content i {
+        padding: 4px; /* Ajusta o padding */
+        margin-right: 8px; /* Ajusta a margem */
+    }
+}
+ 
+/* responsividade do Portifolio */
+
+/*responsividade do time*/
+
+@media (max-width: 768px) {
+    #teams h2 {
+        font-size: 30px; /* Ajusta o tamanho da fonte */
+    }
+
+    #teams p {
+        margin-bottom: 30px; /* Ajusta a margem inferior */
+    }
+
+    #teams .wrapper .card-items {
+        flex-direction: column; /* Alinha os cartões verticalmente */
+        gap: 20px; /* Espaço entre os cartões */
+    }
+
+    #teams .wrapper .card {
+        width: 100%; /* Ajusta a largura para 100% */
+    }
+
+    #teams .wrapper .card .card-header {
+        width: 150px; /* Ajusta a largura da imagem */
+        height: 150px; /* Ajusta a altura da imagem */
+    }
+
+    #teams .wrapper .card h3 {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    #teams .wrapper .card .card-body h4 {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    #teams h2 {
+        font-size: 24px; /* Ajusta o tamanho da fonte */
+    }
+
+    #teams .wrapper .card-items {
+        flex-direction: column; /* Alinha os cartões verticalmente */
+        gap: 15px; /* Reduz o espaço entre os cartões */
+    }
+
+    #teams .wrapper .card {
+        width: 100%; /* Ajusta a largura para 100% */
+    }
+
+    #teams .wrapper .card .card-header {
+        width: 120px; /* Ajusta a largura da imagem */
+        height: 120px; /* Ajusta a altura da imagem */
+    }
+
+    #teams .wrapper .card h3 {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #teams .wrapper .card .card-body h4 {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+/*responsividade do blog*/
+
+@media (max-width: 767px) {
+    #blog .wrapper .header h4 {
+        font-size: 1.2em; /* Reduz o tamanho da fonte */
+    }
+
+    #blog .wrapper .blog-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #blog .wrapper .blog-info h2 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte */
+    }
+
+    #blog .wrapper .blog-info a {
+        margin-top: 10px;
+    }
+
+    #blog .wrapper .blog-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #blog .wrapper .card {
+        max-width: 100%;
+        margin: 20px 0; /* Ajusta a margem */
+    }
+}
+
+/* Design responsive (contatos)*/
+
+@media (max-width: 991px) {
+    #contact {
+        padding: 20px; /* Reduz padding para dispositivos menores */
+    }
+
+    .box {
+        grid-template-columns: 1fr; /* Altera para uma coluna */
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+        gap: 15px; /* Ajusta o espaçamento entre os itens */
+        max-width: 100%; /* Garante que ocupe toda a largura disponível */
+        margin: 0 auto; /* Centraliza a caixa horizontalmente */
+    }
+
+    .contact {
+        padding: 20px; /* Ajusta o padding para dispositivos menores */
+    }
+
+    .inputBox {
+        margin-bottom: 15px; /* Ajusta o espaçamento inferior para input boxes */
+    }
+
+    .inputBox input,
+    .inputBox textarea {
+        font-size: 0.9em; /* Reduz o tamanho da fonte */
+        padding: 8px; /* Ajusta o padding */
+    }
+
+    .inputBox input[type="submit"] {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do botão de envio */
+        max-width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+        padding: 10px; /* Ajusta o padding do botão de envio */
+    }
+
+    .info {
+        padding: 15px; /* Reduz o padding da seção de informações */
+    }
+
+    .info .infoBox div span {
+        font-size: 1.2em; /* Reduz o tamanho dos ícones de informações */
+        min-width: 30px; /* Ajusta o tamanho mínimo dos ícones */
+        height: 30px; /* Ajusta a altura dos ícones */
+    }
+
+    .sci li a {
+        font-size: 1.5em; /* Reduz o tamanho dos ícones de redes sociais */
+    }
+
+    .doacao h1 {
+        font-size: 1.2em; /* Reduz o tamanho da fonte do título de doação */
+    }
+
+    .doacao button {
+        width: 150px; /* Reduz a largura do botão de doação */
+        height: 30px; /* Reduz a altura do botão de doação */
+        margin-top: 20px; /* Ajusta a margem superior do botão de doação */
+    }
+}
+
+/*footer responsividade*/
+
+@media (max-width: 767px) {
+    .footer-col {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .row-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 15px;
+    }
+
+    .footer-col ul li a {
+        font-size: 14px;
+    }
+
+    .footer-col .social-links {
+        gap: 8px;
+    }
+
+    .footer-col .social-links a {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+}
