@@ -410,6 +410,10 @@ body {
     margin-bottom: 100px;
 }
 
+.owl-carousel {
+    min-height: 300px; /* Ajuste conforme necessário */
+}
+
 .owl-carousel .item {
     display: flex; /* Usa flexbox para centralizar o conteúdo */
     align-items: center; /* Alinha o conteúdo verticalmente */
