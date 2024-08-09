@@ -123,8 +123,9 @@ html{
     align-items: center; /* Alinha verticalmente o título com a imagem */
 }
 .brand-left img {
-    max-width: 100px; /* Ajusta o tamanho da imagem, se necessário */
-    margin-right: 18%; /* Espaço entre a imagem e o título */
+    max-width: 100%; /* Ajusta a largura máxima da imagem ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 80px;
 }
 .brand-left h1 {
     font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
@@ -160,18 +161,79 @@ html{
 }
 
 /* Dropdown Content */
+/* Navbar Bottom */
+.showcase .navbar-bottom {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-top: 0;
+}
+.brand-left {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente o título com a imagem */
+}
+.brand-left img {
+    max-width: 100px; /* Ajusta o tamanho da imagem, se necessário */
+    margin-right: 18%; /* Espaço entre a imagem e o título */
+}
+.brand-left h1 {
+    font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
+    margin: 0; /* Remove margem padrão do <h1> */
+}
+
+/* Menu Right Styling */
+.showcase .navbar-bottom .menu-right {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.showcase .navbar-bottom .menu-right li {
+    margin: 0 5px;
+    position: relative; /* Necessário para o posicionamento do dropdown */
+}
+
+/* Dropdown Button */
+/* Dropbtn Style */
+/* Dropbtn Style */
+.showcase .navbar-bottom .dropdown .dropbtn {
+    text-decoration: none;
+    color: #4829f9;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+/* Hover Effect for Dropbtn */
+.showcase .navbar-bottom .dropdown .dropbtn:hover {
+    color: #000;
+}
+
+/* Dropdown Content */
 .showcase .navbar-bottom .dropdown .dropdown-content {
     display: none; /* Oculta o dropdown por padrão */
     position: absolute;
     background-color: #fcf8f8;
-    min-width: 160px;
+    min-width: 160px; /* Ajuste conforme necessário */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%;
-    left: 0;
+    top: 100%; /* Coloca o dropdown abaixo do botão */
+    left: 0; /* Alinha o dropdown com o botão à esquerda */
     white-space: nowrap; /* Faz com que os itens do dropdown se alinhem horizontalmente */
+    transform: translateX(-100%); /* Move o dropdown para a esquerda do botão */
 }
 
+/* Dropdown Links Style */
 .showcase .navbar-bottom .dropdown .dropdown-content a {
     color: #4829f9;
     padding: 12px 16px;
@@ -179,18 +241,20 @@ html{
     display: block;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    text-align: left; /* Garante que o texto se alinhe à esquerda */
 }
 
+/* Hover Effect for Dropdown Links */
 .showcase .navbar-bottom .dropdown .dropdown-content a:hover {
     background-color: #e6e6e6;
 }
 
 /* Show Dropdown on Hover */
 .showcase .navbar-bottom .dropdown:hover .dropdown-content {
-    display: flex; /* Exibe o dropdown */
-    flex-direction: column; /* Alinha os itens verticalmente */
+    display: block; /* Exibe o dropdown */
 }
 
+/* Adjust the width and positioning if necessary */
 .showcase .navbar-bottom .dropdown:hover .dropbtn {
     color: #000; /* Cor do botão quando o dropdown é exibido */
 }
@@ -315,92 +379,6 @@ body {
     color: #f4f4f4;
 }
 
-
-/* Services Section Bottom */
-#goal{
-    display: flex;
-    padding-top: 20px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-#goal div{
-    flex: 1 ;
-}
-#goal .goal-img{
-    flex: 1;
-    min-width: 300px;
-    max-width: 100%;
-    position: relative;
-    margin: 0 auto;
-    height: 300px;
-    overflow: hidden;
-}
-
-#goal .goal-img img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-#goal .goal-text{
-    margin: 0 20px;
-    flex: 2;
-}
-
-#goal .goal-text a{
-    display: inline-block;
-    color: #f4f4f4;
-    background: #4829f9;
-    text-decoration: none;
-    font-size: 14px;
-    border: 1px solid #fff;
-    border-radius: 25px;
-    padding: 8px 15px;
-    transition: 0.5s;
-}
-
-#goal .goal-text a:hover{
-    color: #fff;
-    background: #000
-}
-
-#goal .goal-text h2{
-    margin: 20px 0;
-    color: #000;
-}
-
-#goal .goal-text .contents{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#goal .goal-text .contents .content{
-    display: flex;
-    align-items: center;
-    gap: 10px;   
-}
-
-#goal .goal-text .contents .content h3{
-    font-size: 18px;
-    padding-bottom: 5px;
-    color: #4829f9;
-}
-
-#goal .goal-text .contents .content p{
-    color: #1a1b1e
-}
-
-#goal .goal-text .contents .content i{
-    color: #ffffff;
-    padding: 6px;
-    background: #4829f9;
-    align-self: flex-start; /* alinha um item flexível no topo do seu container.*/
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
 /* Portfolio Section Styling */
 
 #portfolio {
@@ -475,127 +453,6 @@ body {
 }
 
 
-/*Teams Section Styling*/
-#teams {
-    background-color: #f8f9fa; /* Cor de fundo clara */
-    padding: 20px; /* Padding ao redor da seção */
-}
-
-#teams h3{
-    color: #000;
-    font-style: 16px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-}
-
-#teams h2{
-    font-size: 36px;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-#teams h2 span{
-    font-weight: 500;
-    color:#4829f9;
-}
-
-#teams p{
-    color: #000;
-    line-height: 1.6;
-    margin-bottom: 50px;
-}
-
-#teams .wrapper {
-    max-width: 1200px; /* Largura máxima para o wrapper */
-    margin: 0 auto; /* Centraliza o wrapper */
-}
-
-#teams .wrapper .card-items{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-    justify-content: center;
-    overflow: hidden;
-    gap: 20px;
-}
-
-#teams .wrapper .card {
-    /* margin: 20px; */
-    display: flex;
-    flex-direction: column;
-    background-color: #f6f6f6;
-    border-radius: 5px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-    width: 280px;
-    z-index: 1;
-    transition: all 0.5 ease;
-}
-
-#teams .wrapper .card:hover{
-    background:#4829f9;
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-#teams .wrapper .card .card-header{
-    width: 180px;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 20px auto;
-    /* transform: translateY(40px); */
-}
-
-#teams .wrapper .card .card-header img{
-    width: 100%;
-    height: auto;
-
-}
-
-#teams .wrapper .card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 200px;
-}
-
-#teams .wrapper .card h3{
-    font-size: 18px;
-    color: #95A2BB;
-    padding-top: 10px;
-}
-
-#teams .wrapper .card .card-body h4{
-    font-size: 16px;
-    font-weight: 600;
-    color: #4829f9;
-    margin-top: 5px;
-}
-
-#teams .wrapper .card .card-body ul{
-    display: flex;
-    list-style: none;
-    padding-top: 20px;
-    gap: 10px;
-}
-
-#teams .wrapper .card .card-body ul li a{
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background: #fff;
-    color: #1a1b1e;
-    transition: all 0.3 ease;
-}
-
-#teams .wrapper .card .card-body ul li a:hover{
-    background: #fff;
-    color: #4829f9;
-}
 
 /*Blog Section Styling*/
 #blog{
@@ -929,17 +786,24 @@ body {
 .doacao h1 {
     margin-bottom: 20px;
 }
-
 .doacao button {
-    color: #fff;
-    background-color: #4829f9;
-    border-radius: 8px;
-    height: 35px;
+    background-color: #4829f9; /* Cor de fundo do botão */
+    border: none; /* Remove bordas padrão do botão */
+    padding: 0; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    height: 265px;
     width: 200px;
     margin-top: 20px;
-    border: none;
-    cursor: pointer;
 }
+
+/* Estilos para o link dentro do botão */
+.doacao button a {
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Deixa o texto mais destacado */
+}
+
 
 
 /*Footer Section Styling*/
@@ -1183,67 +1047,7 @@ body {
  
 /* responsividade do Portifolio */
 
-/*responsividade do time*/
 
-@media (max-width: 768px) {
-    #teams h2 {
-        font-size: 30px; /* Ajusta o tamanho da fonte */
-    }
-
-    #teams p {
-        margin-bottom: 30px; /* Ajusta a margem inferior */
-    }
-
-    #teams .wrapper .card-items {
-        flex-direction: column; /* Alinha os cartões verticalmente */
-        gap: 20px; /* Espaço entre os cartões */
-    }
-
-    #teams .wrapper .card {
-        width: 100%; /* Ajusta a largura para 100% */
-    }
-
-    #teams .wrapper .card .card-header {
-        width: 150px; /* Ajusta a largura da imagem */
-        height: 150px; /* Ajusta a altura da imagem */
-    }
-
-    #teams .wrapper .card h3 {
-        font-size: 16px; /* Ajusta o tamanho da fonte */
-    }
-
-    #teams .wrapper .card .card-body h4 {
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-    }
-}
-
-@media (max-width: 480px) {
-    #teams h2 {
-        font-size: 24px; /* Ajusta o tamanho da fonte */
-    }
-
-    #teams .wrapper .card-items {
-        flex-direction: column; /* Alinha os cartões verticalmente */
-        gap: 15px; /* Reduz o espaço entre os cartões */
-    }
-
-    #teams .wrapper .card {
-        width: 100%; /* Ajusta a largura para 100% */
-    }
-
-    #teams .wrapper .card .card-header {
-        width: 120px; /* Ajusta a largura da imagem */
-        height: 120px; /* Ajusta a altura da imagem */
-    }
-
-    #teams .wrapper .card h3 {
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-    }
-
-    #teams .wrapper .card .card-body h4 {
-        font-size: 12px; /* Ajusta o tamanho da fonte */
-    }
-}
 
 /*responsividade do blog*/
 
