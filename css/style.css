@@ -79,19 +79,16 @@ html{
     z-index: 1000; /* Garantir que a navbar-top esteja sobre outros elementos */
 }
 
-.showcase .navbar-top .left,
 .showcase .navbar-top .right {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.showcase .navbar-top .left li,
 .showcase .navbar-top .right li {
     margin: 5px;
 }
 
-.showcase .navbar-top .left a,
 .showcase .navbar-top .right a {
     font-size: 13px;
     color: #fff;
@@ -99,7 +96,7 @@ html{
     transition: all 0.5s ease;
 }
 
-.showcase .navbar-top .left a:hover,
+
 .showcase .navbar-top .right a:hover {
     color: #ffff00;
 }
@@ -122,17 +119,17 @@ html{
     display: flex; /* Usa flexbox para alinhar os itens */
     align-items: center; /* Alinha verticalmente o título com a imagem */
 }
-.brand-left img {
-    max-width: 100%; /* Ajusta a largura máxima da imagem ao tamanho do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 80px;
+.brand-left img { /*Imagem logo da gugu*/
+    max-width: 100%; 
+    height: auto; /* Auto Mantém a proporção da imagem */
+    max-height: 100px;
+    margin-right: 20%;
 }
 .brand-left h1 {
     font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
     margin: 0; /* Remove margem padrão do <h1> */
 }
 
-/* Menu Right Styling */
 .showcase .navbar-bottom .menu-right {
     display: flex;
     list-style: none;
@@ -143,10 +140,9 @@ html{
 
 .showcase .navbar-bottom .menu-right li {
     margin: 0 5px;
-    position: relative; /* Necessário para o posicionamento do dropdown */
+    position: relative; /* position relative é Necessário para o posicionamento do dropdown */
 }
 
-/* Dropdown Button */
 .showcase .navbar-bottom .dropdown .dropbtn {
     text-decoration: none;
     color: #4829f9;
@@ -160,11 +156,9 @@ html{
     color: #000;
 }
 
-/* Dropdown Content */
-/* Navbar Bottom */
 .showcase .navbar-bottom {
     width: 100%;
-    height: 100px;
+    height: 150px;
     background: #fff;
     padding: 15px 10px;
     display: flex;
@@ -175,20 +169,7 @@ html{
     z-index: 999;
     margin-top: 0;
 }
-.brand-left {
-    display: flex; /* Usa flexbox para alinhar os itens */
-    align-items: center; /* Alinha verticalmente o título com a imagem */
-}
-.brand-left img {
-    max-width: 100px; /* Ajusta o tamanho da imagem, se necessário */
-    margin-right: 18%; /* Espaço entre a imagem e o título */
-}
-.brand-left h1 {
-    font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
-    margin: 0; /* Remove margem padrão do <h1> */
-}
 
-/* Menu Right Styling */
 .showcase .navbar-bottom .menu-right {
     display: flex;
     list-style: none;
@@ -202,16 +183,14 @@ html{
     position: relative; /* Necessário para o posicionamento do dropdown */
 }
 
-/* Dropdown Button */
-/* Dropbtn Style */
-/* Dropbtn Style */
 .showcase .navbar-bottom .dropdown .dropbtn {
     text-decoration: none;
     color: #4829f9;
     padding: 0 20px;
-    font-size: 14px;
+    font-size: 54px;
     font-weight: 600;
     transition: all 0.5s ease;
+    
 }
 
 /* Hover Effect for Dropbtn */
@@ -244,17 +223,16 @@ html{
     text-align: left; /* Garante que o texto se alinhe à esquerda */
 }
 
-/* Hover Effect for Dropdown Links */
+
 .showcase .navbar-bottom .dropdown .dropdown-content a:hover {
     background-color: #e6e6e6;
 }
 
-/* Show Dropdown on Hover */
+
 .showcase .navbar-bottom .dropdown:hover .dropdown-content {
-    display: block; /* Exibe o dropdown */
+    display: block; /* Exibe o dropdown, é necessario display em bloco */
 }
 
-/* Adjust the width and positioning if necessary */
 .showcase .navbar-bottom .dropdown:hover .dropbtn {
     color: #000; /* Cor do botão quando o dropdown é exibido */
 }
@@ -280,53 +258,11 @@ body {
     text-align: flex-start;
 }
 
-/*Imagem e conteudo*/
-.showcase-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    justify-content: center; /* Espaça o conteúdo igualmente */
-    padding: 20px; /* Adiciona um pouco de padding, se necessário */
-}
-
-/* Estiliza a imagem para que fique quadrada e com overflow escondido */
-
-.showcase .background img {
-    width: 100%;
-    height: auto; /* Ajuste a altura automaticamente para manter a proporção */
-    object-fit: cover; /* Garante que a imagem cubra o container mantendo a proporção */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-    border-radius: 10px; /* Bordas arredondadas */
-}
-
-.showcase .showcase-content p{
-    color: #000;
-    line-height: 1.6;
-    margin: 0 auto;
-    text-align:justify;
-    width: 100%;
-}
-
-.showcase .showcase-content h1{
-    color: #4829f9;
-    text-align:center;
-    margin: 0 auto;
-    line-height: 1.6;
-    width: 100%;
-}
-
-
-
 /*Services sectom styling*/
 
 #services {
     background-color: #f8f9fa; /* Adiciona uma cor de fundo clara */
     padding: 20px; /* Adiciona um padding ao redor da seção */
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto; /* Centraliza o wrapper */
 }
 
 #services .items{
@@ -359,7 +295,8 @@ body {
     font: 14px;
     color: #95A2BB
 }
-
+/*  icones da area serviços
+ 
 #services .items .item i{
     color: #95A2BB;
     font-size: 24px;
@@ -368,7 +305,7 @@ body {
 
 #services .items .item:hover i{
     color: #55BA53;
-}
+} */
 
 #services .items .item:hover{
     background: #3019b1;
@@ -481,7 +418,7 @@ body {
 #blog .wrapper .header span{
     height: 1px;
     width: 4%;
-    background: #95A2BB;
+    background: #fff;
 }
 
 #blog .wrapper .header h4{
@@ -536,7 +473,7 @@ body {
 }
 
 #blog .wrapper .card{
-    background-color: #cfcfcf;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
     width: 100%;
