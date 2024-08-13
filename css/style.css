@@ -120,10 +120,10 @@ html{
     align-items: center; /* Alinha verticalmente o título com a imagem */
 }
 .brand-left img { /*Imagem logo da gugu*/
-    max-width: 100%; 
+    max-width: 120%; 
     height: auto; /* Auto Mantém a proporção da imagem */
     max-height: 100px;
-    margin-right: 20%;
+    margin-right: 50%;
 }
 .brand-left h1 {
     font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
@@ -473,6 +473,8 @@ body {
 }
 
 #blog .wrapper .card{
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total do card */
+    padding: 10px; /* Adicione um padding interno se necessário */
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
@@ -733,8 +735,8 @@ body {
     padding: 0; /* Espaçamento interno do botão */
     border-radius: 5px; /* Cantos arredondados do botão */
     cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
-    height: 265px;
-    width: 200px;
+    height: 60px;
+    width: 20%;
     margin-top: 20px;
 }
 
@@ -991,6 +993,17 @@ body {
 
 
 /*responsividade do blog*/
+@media (min-width: 768px) {
+    #blog .wrapper .blog-card {
+        flex-direction: row; /* Garante que os cards fiquem alinhados horizontalmente */
+        flex-wrap: nowrap; /* Impede que os cards se movam para a próxima linha */
+    }
+
+    #blog .wrapper .card {
+        flex: 1 1 30%; /* Ajuste para a largura desejada dos cards */
+    }
+}
+
 
 @media (max-width: 767px) {
     #blog .wrapper .header h4 {
@@ -1021,6 +1034,7 @@ body {
         margin: 20px 0; /* Ajusta a margem */
     }
 }
+
 
 /* Design responsive (contatos)*/
 

@@ -1,31 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Verifica se o elemento searchForm existe antes de adicionar o event listener
-    let searchForm = document.querySelector('.search-form');
-    if (searchForm) {
-        document.querySelector('#search-btn').onclick = () => {
-            searchForm.classList.toggle('active');
-        };
-        window.onscroll = () => {
-            searchForm.classList.remove('active');
-        };
-    } else {
-        console.error('Elemento .search-form não encontrado.');
-    }
 
-    // Verifica se o elemento menu-toggle existe antes de adicionar o event listener
-    const menuToggle = document.getElementById('menu-toggle');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            if (mobileMenu) {
-                mobileMenu.classList.toggle('active');
-            } else {
-                console.error('Elemento .mobile-menu não encontrado.');
-            }
-        });
-    } else {
-        console.error('Elemento #menu-toggle não encontrado.');
-    }
+
 
     // jQuery para scroll e Owl Carousel
     $(window).scroll(function() {
