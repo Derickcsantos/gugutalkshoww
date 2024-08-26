@@ -1,6 +1,6 @@
 
 <div align="center">
-# GuguTalkShow_ofc
+ GuguTalkShow_ofc
 
 # 🌟 **Principais Funcionalidades**
 
