@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigation: true,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 2000, // Corrigido de autoplayTimeOut para autoplayTimeout
+        autoplayTimeout: 9000, // Corrigido de autoplayTimeOut para autoplayTimeout
         autoplayHoverPause: true,
         responsive: {
             0: {

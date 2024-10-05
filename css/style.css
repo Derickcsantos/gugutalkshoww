@@ -118,17 +118,29 @@ html{
 .brand-left {
     display: flex; /* Usa flexbox para alinhar os itens */
     align-items: center; /* Alinha verticalmente o título com a imagem */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+    margin: 0 0 0 30px;
+    border-radius: 50%;
 }
-.brand-left img { /*Imagem logo da gugu*/
-    max-width: 120%; 
-    height: auto; /* Auto Mantém a proporção da imagem */
-    max-height: 100px;
-    margin-right: 50%;
+
+.brand-left img { /* Imagem do logo */
+    max-width: 120%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 150px;
+    margin-right: 30%;
+    border-radius: 50%;
 }
+
 .brand-left h1 {
-    font-size: 30px; /* Ajusta o tamanho da fonte do título, se necessário */
+    font-size: 30px; /* Tamanho da fonte do título */
     margin: 0; /* Remove margem padrão do <h1> */
 }
+
+/* Efeito de box-shadow ao passar o mouse */
+/* .brand-left:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor */
+
+
 
 .showcase .navbar-bottom .menu-right {
     display: flex;
@@ -136,25 +148,71 @@ html{
     flex-wrap: wrap;
     font-size: 14px;
     font-weight: 600;
+    margin: 0 30px 0 0;
+    padding: 0;
 }
 
 .showcase .navbar-bottom .menu-right li {
-    margin: 0 5px;
-    position: relative; /* position relative é Necessário para o posicionamento do dropdown */
+    margin: 0 10px;
+    position: relative;
 }
 
 .showcase .navbar-bottom .dropdown .dropbtn {
     text-decoration: none;
-    color: #4829f9;
-    padding: 0 20px;
-    font-size: 14px;
+    color: red;
+    padding: 10px 20px;
+    font-size: 16px;
     font-weight: 600;
-    transition: all 0.5s ease;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .showcase .navbar-bottom .dropdown .dropbtn:hover {
-    color: #000;
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Estilo para o Dropdown Horizontal */
+.showcase .navbar-bottom .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: 100%; /* Alinha logo abaixo do botão */
+    left: 0;
+    padding: 10px 0;
+    white-space: nowrap; /* Evita que os itens do menu quebrem para outra linha */
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.showcase .navbar-bottom .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block; /* Faz os itens ficarem lado a lado */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.showcase .navbar-bottom .dropdown-content a:hover {
+    background-color: #4829f9;
+    color: #fff;
+}
+
+/* Quando o dropdown é ativado */
+.showcase .navbar-bottom .dropdown:hover .dropdown-content {
+    display: flex; /* Exibe o menu em linha */
+    visibility: visible;
+    opacity: 1;
+}
+
+
 
 .showcase .navbar-bottom {
     width: 100%;
@@ -185,7 +243,7 @@ html{
 
 .showcase .navbar-bottom .dropdown .dropbtn {
     text-decoration: none;
-    color: #4829f9;
+    color: #000;
     padding: 0 20px;
     font-size: 54px;
     font-weight: 600;
@@ -651,6 +709,11 @@ body {
     font-weight: 500;
     cursor: pointer;
     padding: 14px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox input[type="submit"]{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Placeholder */
@@ -747,6 +810,9 @@ body {
     font-weight: bold; /* Deixa o texto mais destacado */
 }
 
+.doacao button:hover{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 /*Footer Section Styling*/
@@ -881,6 +947,11 @@ body {
     opacity: 1;
     pointer-events: auto;
     bottom: 30px;
+}
+
+.marketing{
+    text-decoration: underline;
+    color: #fff;
 }
 
 /* // responsividade // */
